@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.paint.Board;
 import com.company.paint.DisplayDriver;
+import com.company.platform.DisplayDriverImpl;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -27,14 +28,20 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
         primaryStage.setTitle("JavaFxSample");
+
         Canvas canvas = new Canvas();
         canvas.setWidth(BOARD_WIDTH);
         canvas.setHeight(BOARD_HEIGHT);
+
         BorderPane group = new BorderPane(canvas);
+
         Scene scene = new Scene(group);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
         gc = canvas.getGraphicsContext2D();
         new Thread(this::runMainGameLoopInThread).start();
 
