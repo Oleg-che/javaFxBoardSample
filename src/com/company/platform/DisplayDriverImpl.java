@@ -18,11 +18,6 @@ public class DisplayDriverImpl implements DisplayDriver {
     }
 
     @Override
-    public void drawCircle(double x, double y, double diameter) {
-        gc.fillOval(x, y, diameter, diameter);
-    }
-
-    @Override
     public double getWidth() {
         return gc.getCanvas().getWidth();
     }
@@ -30,6 +25,16 @@ public class DisplayDriverImpl implements DisplayDriver {
     @Override
     public double getHeight() {
         return gc.getCanvas().getHeight();
+    }
+
+    @Override
+    public void drawCircle(double x, double y, double diameter) {
+        gc.fillOval(x, y, diameter, diameter);
+    }
+
+    @Override
+    public void drawSquare(double x, double y, double size) {
+        gc.fillRect(x, y, size, size);
     }
 
 }
