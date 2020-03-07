@@ -1,9 +1,8 @@
 package com.company.paint;
 
+import com.company.Const;
 import com.company.paint.shape.CircleShape;
-import com.company.paint.shape.CompoundShape;
 import com.company.paint.shape.Shape;
-import com.company.paint.shape.Square;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +15,9 @@ public class Board {
 
     public Board(DisplayDriver displayDriver) {
         this.displayDriver = displayDriver;
-        shapes.add(new CircleShape(this, displayDriver, 10, 10));
-        shapes.add(new CircleShape(this, displayDriver, 10, 200));
-        shapes.add(new CircleShape(this, displayDriver, 100, 20));
+        for (int i = 0; i < Const.SHAPE_COUNT; i++) {
+            shapes.add(new CircleShape(this, displayDriver, 10, 10));
+        }
     }
 
     public void drawFrame() {
@@ -33,4 +32,7 @@ public class Board {
         }
     }
 
+    public List<Shape> getShapes() {
+        return shapes;
+    }
 }
