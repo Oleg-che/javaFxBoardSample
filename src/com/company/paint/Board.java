@@ -17,9 +17,8 @@ public class Board {
     public Board(DisplayDriver displayDriver) {
         this.displayDriver = displayDriver;
         shapes.add(new CircleShape(this, displayDriver, 10, 10));
-        shapes.add(new CircleShape(this, displayDriver, 100, 200));
-        shapes.add(new Square(this, displayDriver, 10, 300));
-        shapes.add(new CompoundShape(this, displayDriver, 10, 10));
+        shapes.add(new CircleShape(this, displayDriver, 10, 200));
+        shapes.add(new CircleShape(this, displayDriver, 100, 20));
     }
 
     public void drawFrame() {

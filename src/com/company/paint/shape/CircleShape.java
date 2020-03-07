@@ -13,7 +13,7 @@ public class CircleShape extends BaseShape implements Shape {
 
     @Override
     public void draw() {
-        displayDriver.setColor("#F00");
+        displayDriver.setColor(color.toHex());
         displayDriver.drawCircle(x, y, size);
     }
 

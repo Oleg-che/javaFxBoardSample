@@ -2,6 +2,7 @@ package com.company.paint.shape;
 
 import com.company.paint.Board;
 import com.company.paint.DisplayDriver;
+import com.company.paint.MyColor;
 
 import java.util.Random;
 
@@ -14,6 +15,7 @@ public abstract class BaseShape implements Shape {
     protected double size = 100;
     protected double xSpeed;
     protected double ySpeed;
+    protected MyColor color;
 
     public BaseShape(Board board, DisplayDriver displayDriver, int x, int y) {
         this.board = board;
@@ -23,6 +25,7 @@ public abstract class BaseShape implements Shape {
         Random random = new Random();
         xSpeed = random.nextInt(5) + 2;
         ySpeed = random.nextInt(2) + 3;
+        color = MyColor.values()[random.nextInt(MyColor.values().length)];
     }
 
     @Override
