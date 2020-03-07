@@ -1,4 +1,4 @@
-package com.company;
+package com.company.platform;
 
 import com.company.paint.DisplayDriver;
 import javafx.scene.canvas.GraphicsContext;

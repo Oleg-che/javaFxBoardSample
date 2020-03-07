@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.paint.Board;
 import com.company.paint.DisplayDriver;
+import com.company.platform.DisplayDriverImpl;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
